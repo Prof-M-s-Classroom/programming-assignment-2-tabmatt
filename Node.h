@@ -1,14 +1,18 @@
 #ifndef NODE_H
 #define NODE_H
 
+using namespace std;
 template <typename T>
 class Node {
 public:
-    T data;
+    T& data;
     Node* left;
     Node* right;
+    string* description;
 
-    Node(T value) : data(value), left(nullptr), right(nullptr){ } // TODO: Implement constructor here
+    Node(T& d, string* ds) :data(d), left(nullptr), right(nullptr), description(ds) {}
+    Node(T* d) : data(d), left(nullptr), right(nullptr), description() {}
+    void print() { cout << *description << " ";}// TODO: Implement constructor here
 };
 
 #endif // NODE_H
