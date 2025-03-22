@@ -11,7 +11,7 @@ public:
     string* description;
 
     Node(T& d, string* ds) :data(d), left(nullptr), right(nullptr), description(ds) {}
-    Node(T* d) : data(d), left(nullptr), right(nullptr), description() {}
+    Node(T& d) : data(d), left(nullptr), right(nullptr), description(nullptr) {}
     void print() { cout << *description << " ";}// TODO: Implement constructor here
 };
 

@@ -11,8 +11,9 @@ public:
     T* eventNum;
     Node* left;
     Node* right;
-    string& description;
+    string* description;
 
-    Node(T& d, string& ds): eventNum(d), left(nullptr), right(nullptr), description(ds) {}
+    Node(T& d, string& ds): eventNum(d), left(nullptr), right(nullptr), description(&ds) {}
+    Node(T& d) : eventNum(d), left(nullptr), right(nullptr), description(nullptr) {}
     void print() { cout << description << " ";}
 };
