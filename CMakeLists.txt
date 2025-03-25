@@ -11,4 +11,5 @@ include_directories(.)
 # Source files (only .cpp, no .h files)
 add_executable(CS210PA2
         main.cpp
-        Story.cpp)
+        Story.cpp
+        Node.cpp)
