@@ -6,13 +6,15 @@ template <typename T>
 class Node {
 public:
     T& data;
-    Node* left;
-    Node* right;
-    string* description;
+    Node<T>* left;
+    Node<T>* right;
 
-    Node(T& d, string* ds) :data(d), left(nullptr), right(nullptr), description(ds) {}
-    Node(T& d) : data(d), left(nullptr), right(nullptr), description(nullptr) {}
-    void print() { cout << *description << " ";}// TODO: Implement constructor here
+    Node() : data(0), left(nullptr), right(nullptr) {}
+    Node(T& d) : data(d), left(nullptr), right(nullptr) {}
+    void print() {
+        cout << left << endl;
+        cout << right << endl;
+    }
 };
 
 #endif // NODE_H

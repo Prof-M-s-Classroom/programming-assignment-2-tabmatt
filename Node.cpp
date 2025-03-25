@@ -8,12 +8,9 @@ using namespace std;
 template <typename T>
 class Node {
 public:
-    T* eventNum;
-    Node* left;
-    Node* right;
-    string* description;
+    T& data;
+    Node<T>* left;
+    Node<T>* right;
 
-    Node(T& d, string& ds): eventNum(d), left(nullptr), right(nullptr), description(&ds) {}
-    Node(T& d) : eventNum(d), left(nullptr), right(nullptr), description(nullptr) {}
-    void print() { cout << description << " ";}
+    Node(T& d) : data(d), left(nullptr), right(nullptr) {}
 };

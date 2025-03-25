@@ -11,6 +11,7 @@ int main() {
     // Load the story data from the file
     myGame.loadStoryFromFile(filename, delimiter);
 
+
     // Start the game
     myGame.playGame();
 
