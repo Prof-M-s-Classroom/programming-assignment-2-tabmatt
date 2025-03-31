@@ -31,7 +31,7 @@ public:
         unordered_map<int, Story*> map;
         unordered_map<int, Node<T>*> nodeMap;
         string line;
-        while (getline(file, line)) {
+        while (getline(file, line) && line != "") {
             stringstream ss(line);
             string event, desc, leftEvent, rightEvent;
             int eventID, leftEventID, rightEventID;
@@ -54,6 +54,7 @@ public:
             currentStory -> leftEventNumber = leftEventID;
             currentStory -> rightEventNumber = rightEventID;
 
+
             map[eventID] = currentStory;
 
         }
@@ -69,16 +70,18 @@ public:
                 }
             }
 
-            if (nodeMap.find(map[i] -> leftEventNumber) == nodeMap.end()) {
+            if (nodeMap.find(map[i] -> leftEventNumber) == nodeMap.end() && nodeMap[i] -> left == nullptr) {
                 if ((map[i] -> leftEventNumber)!= -1) {
                     leftNode = new Node<Story>(*map[map[i] -> leftEventNumber]);
                     nodeMap[map[i] -> leftEventNumber] = leftNode;
                 }
-            }
+            } else {
+                leftNode = nodeMap[map[i] -> leftEventNumber];
 
+            }
             nodeMap[i] -> left = leftNode;
 
-            if (nodeMap.find(map[i] -> rightEventNumber) == nodeMap.end()) {
+            if (nodeMap.find(map[i] -> rightEventNumber) == nodeMap.end() && nodeMap[i] -> right == nullptr) {
                 if (map[i] -> rightEventNumber != -1) {
                     rightNode = new Node<Story>(*map[map[i] -> rightEventNumber]);
                     nodeMap[map[i] -> rightEventNumber] = rightNode;
@@ -126,10 +129,6 @@ public:
             cin.ignore(numeric_limits<streamsize>::max(), '\n');
             cin >> choice;
         }
-
-
-
-
 
 
         if (choice == 1) {

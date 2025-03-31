@@ -1,7 +1,35 @@
-1 | You wake up in a forest clearing. There are two paths. | 2| 3
-2 | You follow the path to the left and encounter a river. | 4| 5
-3 | You go right and find an old cabin. | 5| 6
-4 | You swim across the river and find a treasure chest. | -1| -1
-5 | You find a hidden passageway that leads to a secret room. | 7| -1
-6 | The cabin is empty. You find a trapdoor leading downwards. | -1 | -1
-7 | Deez nuts | -1 | -1
+1 | Welcome to The GAME! Press 1 to start the tutorial! | 2 | 3
+2 | Great! Pick your weapon! | 4 | 5
+3 | Silly Errors Happen! Try Again | 6 | 7
+4 | Superior Sword| 8 | 9
+5 | Barreling Blaster| 10 | 11
+6 | Where am I??? | 12| -1
+7 | Who are you??? | 12 | 15
+8 | Use Slash attack | 13 | -1
+9 | Use Stab attack | 13 | -1
+10 | Use single-fire | 13 | -1
+11 | Use burst-fire | 13 | -1
+12 | That is none of your concern! Press 1 to start the tutorial! | 14 | -1
+13 | Great! You are now ready for The GAME! Good Luck! Press 2 to play!| -1 | -1
+14 | Great! Press 1 to choose a weapon! | 16 | 17
+15 | No! Who are you???? | 18 | -1
+16 | Sword (bugged) | 19 | 20
+17 | Blaster (bug) | 21 | 22
+18 | You were assassinated. Before you died, another captive was brought in to play The GAME. Press 2 to exit| -1 | -1
+19 | Use slash attack | 23 | -1
+20 | Run to the wall and stab it | 24 | 25
+21 | Use single-fire attack | 26 | -1
+22 | Shoot the wall with full auto | 27 | 28
+23 | Great! You are now ready to live your life in The GAME! Press 2 to play! | -1 | -1
+24 | Kill everyone inside | 29 | -1
+25 | Break their systems | 29 | -1
+26 | Great! You are equipped for The GAME! Good luck! Press 2 to play! | -1 | -1
+27 | Kill everyone inside | 30 | -1
+28 | Break their systems and fight | 31 | 32
+29 | Your noble effort proved to be nothing as you were killed while attempting to overthrow The GAME. Press 2 to exit | -1 | -1
+30 | You go on a maniacal killing spree, killing everyone in sight, including the captives. Press 2 to continue killing | -1 | -1
+31 | Free the captives | 33 | -1
+32 | Enslave the captives | 34 | -1
+33 | You successfully freed the captives! You are celebrated as a hero as you have overthrown The GAME! Press 2 to be the HERO| -1 | -1
+34 | You enslave the captives and control them through fear! You are their king and they must do your bidding as you conquer The GAME! Press 2 to be the KING!| -1 | -1
+
