@@ -1,0 +1,41 @@
+<html>
+<head>
+<title>Story.h</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #b3ae60;}
+.s1 { color: #bcbec4;}
+.s2 { color: #6aab73;}
+.s3 { color: #cf8e6d;}
+.s4 { color: #bcbec4;}
+.s5 { color: #7a7e85;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+Story.h</font>
+</center></td></tr></table>
+<pre><span class="s0">#ifndef </span><span class="s1">STORY_H</span>
+<span class="s0">#define </span><span class="s1">STORY_H</span>
+
+<span class="s0">#include </span><span class="s2">&lt;string&gt;</span>
+<span class="s3">using namespace </span><span class="s1">std</span><span class="s4">;</span>
+<span class="s3">class </span><span class="s1">Story </span><span class="s4">{</span>
+<span class="s3">public</span><span class="s1">:</span>
+    <span class="s1">string description</span><span class="s4">;</span>
+    <span class="s3">int </span><span class="s1">eventNumber</span><span class="s4">;</span>
+    <span class="s3">int </span><span class="s1">leftEventNumber</span><span class="s4">;</span>
+    <span class="s3">int </span><span class="s1">rightEventNumber</span><span class="s4">;</span>
+
+    <span class="s5">// Default constructor</span>
+    <span class="s1">Story</span><span class="s4">();</span>
+
+    <span class="s5">// Parameterized constructor</span>
+    <span class="s1">Story</span><span class="s4">(</span><span class="s1">string desc</span><span class="s4">, </span><span class="s3">int </span><span class="s1">num</span><span class="s4">, </span><span class="s3">int </span><span class="s1">leftNum</span><span class="s4">, </span><span class="s3">int </span><span class="s1">rightNum</span><span class="s4">);</span>
+<span class="s4">};</span>
+
+<span class="s0">#endif </span><span class="s5">// STORY_H</span></pre>
+</body>
+</html>

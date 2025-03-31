@@ -1,0 +1,119 @@
+<html>
+<head>
+<title>README.md</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #bcbec4;}
+.s1 { color: #bcbec4;}
+.s2 { color: #56a8f5;}
+.s3 { color: #cf8e6d;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+README.md</font>
+</center></td></tr></table>
+<pre><span class="s0">[![</span><span class="s1">Review Assignment Due Date</span><span class="s0">](</span><span class="s2">https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg</span><span class="s0">)](</span><span class="s2">https://classroom.github.com/a/jIKk4bke</span><span class="s0">)</span>
+<span class="s3"># </span><span class="s1">CS210 Data Structures SP25</span>
+<span class="s3">## </span><span class="s1">Programming Assignment 2</span><span class="s0">: </span><span class="s1">Text-Based RPG Using Decision Trees</span>
+
+<span class="s3">### </span><span class="s0">**</span><span class="s1">Student Name</span><span class="s0">:** </span><span class="s1">`</span><span class="s0">[</span><span class="s1">Your Name</span><span class="s0">]</span><span class="s1">`  </span>
+<span class="s3">### </span><span class="s0">**</span><span class="s1">Student ID</span><span class="s0">:** </span><span class="s1">`</span><span class="s0">[</span><span class="s1">Your ID</span><span class="s0">]</span><span class="s1">`  </span>
+
+<span class="s3">---</span>
+
+<span class="s3">## </span><span class="s0">**</span><span class="s1">1. Project Overview</span><span class="s0">**</span>
+<span class="s0">(</span><span class="s1">Provide a brief summary of your RPG game. Describe how it uses a decision tree and how the player interacts with it.</span><span class="s0">)</span>
+
+<span class="s1">Example</span><span class="s0">:</span>
+<span class="s3">&gt; </span><span class="s1">This project implements a text-based RPG using a </span><span class="s0">**</span><span class="s1">binary decision tree</span><span class="s0">**</span><span class="s1">. Each game event is represented as a node, and the player progresses by choosing between two paths at each stage. The storyline is loaded from an external text file </span><span class="s0">(</span><span class="s1">`story.txt`</span><span class="s0">)</span><span class="s1">, which is parsed to construct the decision tree. The game ends when a leaf node </span><span class="s0">(</span><span class="s1">with `-1` as left and right children</span><span class="s0">) </span><span class="s1">is reached.</span>
+
+<span class="s3">---</span>
+
+<span class="s3">## </span><span class="s0">**</span><span class="s1">2. Folder &amp; File Structure</span><span class="s0">**</span>
+<span class="s0">(</span><span class="s1">Explain the role of each file in your project.</span><span class="s0">)</span>
+
+<span class="s3">- </span><span class="s0">**</span><span class="s1">`main.cpp`</span><span class="s0">** </span><span class="s1">→ `</span><span class="s0">[</span><span class="s1">Describe its function</span><span class="s0">]</span><span class="s1">`  </span>
+<span class="s3">- </span><span class="s0">**</span><span class="s1">`GameDecisionTree.h`</span><span class="s0">** </span><span class="s1">→ `</span><span class="s0">[</span><span class="s1">Explain what this file contains</span><span class="s0">]</span><span class="s1">`  </span>
+<span class="s3">- </span><span class="s0">**</span><span class="s1">`Node.h`</span><span class="s0">** </span><span class="s1">→ `</span><span class="s0">[</span><span class="s1">Explain what this file contains</span><span class="s0">]</span><span class="s1">`  </span>
+<span class="s3">- </span><span class="s0">**</span><span class="s1">`Story.h`</span><span class="s0">** </span><span class="s1">→ `</span><span class="s0">[</span><span class="s1">Explain what this file contains</span><span class="s0">]</span><span class="s1">`  </span>
+<span class="s3">- </span><span class="s0">**</span><span class="s1">`story.txt`</span><span class="s0">** </span><span class="s1">→ `</span><span class="s0">[</span><span class="s1">Explain how the game loads story events from this file</span><span class="s0">]</span><span class="s1">`  </span>
+
+<span class="s3">---</span>
+
+<span class="s3">## </span><span class="s0">**</span><span class="s1">3. Decision Tree Construction</span><span class="s0">**</span>
+<span class="s0">(</span><span class="s1">Explain how the decision tree is built from the `story.txt` file.</span><span class="s0">)</span>
+
+<span class="s3">- </span><span class="s1">How are `Story` objects created from the text file?  </span>
+<span class="s3">- </span><span class="s1">How are nodes linked based on left and right event numbers?  </span>
+<span class="s3">- </span><span class="s1">What happens if an event has `-1` as left or right children?  </span>
+
+<span class="s3">---</span>
+
+<span class="s3">## </span><span class="s0">**</span><span class="s1">4. Game Traversal</span><span class="s0">**</span>
+<span class="s0">(</span><span class="s1">Describe how the game moves through the decision tree.</span><span class="s0">)</span>
+
+<span class="s3">- </span><span class="s1">How does user input determine the path taken?  </span>
+<span class="s3">- </span><span class="s1">What happens when the player reaches a leaf node?  </span>
+<span class="s3">- </span><span class="s1">Explain the special case where multiple events lead to the same outcome.  </span>
+
+<span class="s3">---</span>
+
+<span class="s3">## </span><span class="s0">**</span><span class="s1">5. File Parsing &amp; Data Loading</span><span class="s0">**</span>
+<span class="s0">(</span><span class="s1">Explain the process of reading `story.txt` and constructing the decision tree.</span><span class="s0">)</span>
+
+<span class="s3">- </span><span class="s1">How is the file read and parsed using a delimiter?  </span>
+<span class="s3">- </span><span class="s1">How do you ensure nodes are properly linked?  </span>
+<span class="s3">- </span><span class="s1">Any challenges faced while handling file input?  </span>
+
+<span class="s3">---</span>
+
+<span class="s3">## </span><span class="s0">**</span><span class="s1">6. Debugging Process </span><span class="s0">(</span><span class="s1">Errors &amp; Fixes</span><span class="s0">)**</span>
+<span class="s0">(</span><span class="s1">Describe one or more debugging challenges you faced and how you fixed them.</span><span class="s0">)</span>
+
+<span class="s1">Example</span><span class="s0">:</span>
+<span class="s3">&gt; </span><span class="s1">Initially, my program was crashing when trying to access an uninitialized node. I realized it was because I was not properly checking for `nullptr` before accessing child nodes, so I added a check to prevent accessing uninitialized memory.</span>
+
+<span class="s3">---</span>
+
+<span class="s3">## </span><span class="s0">**</span><span class="s1">7. Sample Output &amp; Walkthrough</span><span class="s0">**</span>
+<span class="s0">(</span><span class="s1">Provide an example of how the game runs, including player input.</span><span class="s0">)</span>
+
+<span class="s3">---</span>
+
+<span class="s3">## </span><span class="s0">**</span><span class="s1">8. Big-O Analysis of Core Methods</span><span class="s0">**</span>
+<span class="s0">(</span><span class="s1">Analyze the complexity of key methods.</span><span class="s0">)</span>
+
+<span class="s3">- </span><span class="s0">**</span><span class="s1">Loading the tree from the file</span><span class="s0">** </span><span class="s1">→ `O</span><span class="s0">(</span><span class="s1">?</span><span class="s0">)</span><span class="s1">`  </span>
+<span class="s3">- </span><span class="s0">**</span><span class="s1">Searching for an event in the tree</span><span class="s0">** </span><span class="s1">→ `O</span><span class="s0">(</span><span class="s1">?</span><span class="s0">)</span><span class="s1">`  </span>
+<span class="s3">- </span><span class="s0">**</span><span class="s1">Game traversal efficiency</span><span class="s0">** </span><span class="s1">→ `O</span><span class="s0">(</span><span class="s1">?</span><span class="s0">)</span><span class="s1">`  </span>
+
+<span class="s3">---</span>
+
+<span class="s3">## </span><span class="s0">**</span><span class="s1">9. Edge Cases &amp; Testing</span><span class="s0">**</span>
+<span class="s0">(</span><span class="s1">Describe at least one edge case you tested and its outcome.</span><span class="s0">)</span>
+
+<span class="s1">Example</span><span class="s0">:</span>
+<span class="s3">&gt; </span><span class="s1">I tested a scenario where the player reaches a dead-end </span><span class="s0">(</span><span class="s1">leaf node</span><span class="s0">) </span><span class="s1">and ensured the program correctly ends the game.</span>
+
+<span class="s3">---</span>
+
+<span class="s3">## </span><span class="s0">**</span><span class="s1">10. Justification of Additional Features </span><span class="s0">(</span><span class="s1">If Any</span><span class="s0">)**</span>
+<span class="s0">(</span><span class="s1">If you added extra features, describe them and explain why.</span><span class="s0">)</span>
+
+<span class="s1">Example</span><span class="s0">:</span>
+<span class="s3">&gt; </span><span class="s1">I added a </span><span class="s0">**</span><span class="s1">save/load feature</span><span class="s0">** </span><span class="s1">so players can resume the game later. This was done by writing the current node’s event number to a file and reading it when restarting.</span>
+
+<span class="s3">---</span>
+
+<span class="s3">## </span><span class="s0">**</span><span class="s1">Final Notes</span><span class="s0">**</span>
+<span class="s3">- </span><span class="s0">**</span><span class="s1">README is mandatory</span><span class="s0">** </span><span class="s1">→ `</span><span class="s0">(</span><span class="s1">-10 points deduction if missing</span><span class="s0">)</span><span class="s1">.`  </span>
+<span class="s3">- </span><span class="s0">**</span><span class="s1">Code must compile and run</span><span class="s0">** </span><span class="s1">→ `</span><span class="s0">(</span><span class="s1">Code that does not run will receive a 0</span><span class="s0">)</span><span class="s1">.`  </span>
+<span class="s3">- </span><span class="s0">**</span><span class="s1">Do not modify provided skeleton code</span><span class="s0">** </span><span class="s1">→ `</span><span class="s0">(</span><span class="s1">You may only add to it</span><span class="s0">)</span><span class="s1">.`  </span>
+
+<span class="s3">---</span>
+</pre>
+</body>
+</html>

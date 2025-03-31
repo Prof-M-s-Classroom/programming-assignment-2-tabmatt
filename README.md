@@ -32,7 +32,7 @@ Example:
 (Explain how the decision tree is built from the `story.txt` file.)
 
 - How are `Story` objects created from the text file? 
-  - Story objects are created using a delimeter ("|") to split a text line for each data member
+  - Story objects are created using a delimiter ("|") to split a text line for each data member
   - Each line in the text file is in the format "eventNumber" | "description" | "leftEventNumber" | "rightEventNumber"
   - For eventNumber, leftEventNumber, rightEventNumber, they are converted from string to integer using the stoi function
 - How are nodes linked based on left and right event numbers?
