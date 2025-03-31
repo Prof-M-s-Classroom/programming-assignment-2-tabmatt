@@ -1,0 +1,42 @@
+<html>
+<head>
+<title>makefile</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #bcbec4;}
+.s1 { color: #bcbec4;}
+.s2 { color: #7a7e85;}
+.s3 { color: #cf8e6d;}
+.s4 { color: #bcbec4;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+makefile</font>
+</center></td></tr></table>
+<pre><span class="s0">CXX </span><span class="s1">= </span><span class="s0">g++</span>
+<span class="s0">CXXFLAGS </span><span class="s1">= </span><span class="s0">-std</span><span class="s1">=</span><span class="s0">c++17 -Wall -Wextra -pedantic</span>
+
+<span class="s2"># Target executable 
+</span><span class="s0">TARGET </span><span class="s1">= </span><span class="s0">game</span>
+
+<span class="s2"># Source files (only .cpp files, excluding header-only templates) 
+</span><span class="s0">SRCS </span><span class="s1">= </span><span class="s0">main.cpp Story.cpp</span>
+<span class="s0">OBJS </span><span class="s1">= </span><span class="s3">$</span><span class="s1">(</span><span class="s0">SRCS</span><span class="s1">:</span><span class="s0">.cpp</span><span class="s1">=</span><span class="s0">.o</span><span class="s1">)</span>
+
+<span class="s2"># Default target 
+</span><span class="s0">all</span><span class="s1">: </span><span class="s3">$</span><span class="s1">(</span><span class="s0">TARGET</span><span class="s1">)</span>
+
+<span class="s3">$</span><span class="s1">(</span><span class="s0">TARGET</span><span class="s1">): </span><span class="s3">$</span><span class="s1">(</span><span class="s0">OBJS</span><span class="s1">)</span>
+	<span class="s3">$</span><span class="s1">(</span><span class="s0">CXX</span><span class="s1">) </span><span class="s3">$</span><span class="s1">(</span><span class="s0">CXXFLAGS</span><span class="s1">) </span><span class="s0">-o </span><span class="s3">$</span><span class="s1">(</span><span class="s0">TARGET</span><span class="s1">) </span><span class="s3">$</span><span class="s1">(</span><span class="s0">OBJS</span><span class="s1">)</span>
+
+<span class="s0">%.o</span><span class="s1">: </span><span class="s0">%.cpp</span>
+	<span class="s3">$</span><span class="s1">(</span><span class="s0">CXX</span><span class="s1">) </span><span class="s3">$</span><span class="s1">(</span><span class="s0">CXXFLAGS</span><span class="s1">) </span><span class="s0">-c </span><span class="s3">$</span><span class="s0">&lt; -o </span><span class="s3">$</span><span class="s0">@</span>
+
+<span class="s2"># Clean up compiled files 
+</span><span class="s0">clean</span><span class="s1">:</span>
+	<span class="s0">rm -f </span><span class="s3">$</span><span class="s1">(</span><span class="s0">OBJS</span><span class="s1">) </span><span class="s3">$</span><span class="s1">(</span><span class="s0">TARGET</span><span class="s1">)</span></pre>
+</body>
+</html>

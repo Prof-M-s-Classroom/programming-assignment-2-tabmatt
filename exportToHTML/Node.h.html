@@ -1,0 +1,39 @@
+<html>
+<head>
+<title>Node.h</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #b3ae60;}
+.s1 { color: #bcbec4;}
+.s2 { color: #cf8e6d;}
+.s3 { color: #bcbec4;}
+.s4 { color: #6aab73;}
+.s5 { color: #7a7e85;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+Node.h</font>
+</center></td></tr></table>
+<pre><span class="s0">#ifndef </span><span class="s1">NODE_H</span>
+<span class="s0">#define </span><span class="s1">NODE_H</span>
+
+<span class="s2">using namespace </span><span class="s1">std</span><span class="s3">;</span>
+<span class="s2">template </span><span class="s3">&lt;</span><span class="s2">typename </span><span class="s1">T</span><span class="s3">&gt;</span>
+<span class="s2">class </span><span class="s1">Node </span><span class="s3">{</span>
+<span class="s2">public</span><span class="s1">:</span>
+    <span class="s1">T</span><span class="s3">&amp; </span><span class="s1">data</span><span class="s3">;</span>
+    <span class="s1">Node</span><span class="s3">* </span><span class="s1">left</span><span class="s3">;</span>
+    <span class="s1">Node</span><span class="s3">* </span><span class="s1">right</span><span class="s3">;</span>
+    <span class="s1">string</span><span class="s3">* </span><span class="s1">description</span><span class="s3">;</span>
+
+    <span class="s1">Node</span><span class="s3">(</span><span class="s1">T</span><span class="s3">&amp; </span><span class="s1">d</span><span class="s3">, </span><span class="s1">string</span><span class="s3">* </span><span class="s1">ds</span><span class="s3">) </span><span class="s1">:data</span><span class="s3">(</span><span class="s1">d</span><span class="s3">), </span><span class="s1">left</span><span class="s3">(</span><span class="s2">nullptr</span><span class="s3">), </span><span class="s1">right</span><span class="s3">(</span><span class="s2">nullptr</span><span class="s3">), </span><span class="s1">description</span><span class="s3">(</span><span class="s1">ds</span><span class="s3">) {}</span>
+    <span class="s1">Node</span><span class="s3">(</span><span class="s1">T</span><span class="s3">&amp; </span><span class="s1">d</span><span class="s3">) </span><span class="s1">: data</span><span class="s3">(</span><span class="s1">d</span><span class="s3">), </span><span class="s1">left</span><span class="s3">(</span><span class="s2">nullptr</span><span class="s3">), </span><span class="s1">right</span><span class="s3">(</span><span class="s2">nullptr</span><span class="s3">), </span><span class="s1">description</span><span class="s3">(</span><span class="s2">nullptr</span><span class="s3">) {}</span>
+    <span class="s2">void </span><span class="s1">print</span><span class="s3">() { </span><span class="s1">cout </span><span class="s3">&lt;&lt; </span><span class="s1">description </span><span class="s3">&lt;&lt; </span><span class="s4">&quot; &quot;</span><span class="s3">;}</span><span class="s5">// TODO: Implement constructor here</span>
+<span class="s3">};</span>
+
+<span class="s0">#endif </span><span class="s5">// NODE_H</span></pre>
+</body>
+</html>
